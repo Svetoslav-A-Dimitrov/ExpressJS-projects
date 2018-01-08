@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShopStop</title>
+    <link rel="stylesheet" href="../../content/styles/site.css">
+<body>
+<header>
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/product/add">Add Product</a></li>
+            <li><a href="/category/add">Add Category</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!--<img src="../../content/images/beer.jpg">-->
+    <h1 class="head-title">Welcome to ShopStop!</h1>
+    <form id="search-form">
+        <input type="text" name="query" placeholder="Search...">
+        <input type="submit" value="Search">
+    </form>
+    <div class="cards">
+        {content}
+    </div>
+</main>
+<footer>
+    <p>&copy; ShopStop</p>
+</footer>
+</body>
+</html>
