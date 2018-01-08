@@ -1,0 +1,18 @@
+<div class="profile">
+    <h3>Hotels you have added:</h3>
+    {{#each hotels}}
+        <p>Hotel's name: {{this.title}}</p>
+        {{#each this.comments}}
+            <p>Whit comment to him: {{this.comment}}</p>
+        {{/each}}
+    <p>----------------------------------------------</p>
+    {{/each}}
+    <p>----------------------------------------------</p>
+    <h3>Comments you made:</h3>
+    {{#each comments}}
+        <h4>For Hotel: {{this.hotel.title}}</h4>
+        <p>Comment title: {{this.title}}</p>
+        <p>Comment text: {{this.comment}}</p>
+    <p>----------------------------------------------</p>
+    {{/each}}
+</div>
