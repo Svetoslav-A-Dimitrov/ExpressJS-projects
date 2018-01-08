@@ -1,0 +1,19 @@
+<div *ngIf="!wishesExist"> No wishes</div>
+<div class="wishlistBlock" *ngIf="wishesExist">
+  <h1>{{title}}</h1>
+  <ul>
+    <li *ngFor="let wishlist of wishesperPage">
+      <img src={{wishlist.imageUrl}} alt='custum image'>
+      <h3><strong>Wishes creator: </strong>{{wishlist.author}}</h3>
+      <p><strong>The wish is: </strong>{{wishlist.wishes}}</p>
+      <!--<p><a [routerLink]="['/wishlist/details/', wishlist.id]">-->
+        <!--Details-->
+      <!--</a></p>-->
+    </li>
+  </ul>
+</div>
+<div>
+  <button class="btn btn-primary" (click)="goToPrevPage()">Prev</button>
+  <button class="btn btn-primary" (click)="goToNextPage()">Next</button>
+</div>
+

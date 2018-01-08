@@ -1,0 +1,35 @@
+
+.form-group{
+  position: relative;
+}
+
+.alert{
+  position: absolute;
+  right: -210px;
+  top: 15px;
+  width: 200px;
+  cursor: pointer;
+}
+.info{
+  margin-top: 100px;
+}
+.form{
+  margin: 0 auto;
+  width: 50%;
+}
+.form, .info{
+  margin: 100px auto;
+  width: 50%;
+}
+
+h1{
+  margin-bottom: 20px
+}
+ul{
+  list-style-type: none;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}

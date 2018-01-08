@@ -1,0 +1,10 @@
+<h1>CAR DETAILS</h1>
+<div class='description-block' *ngIf="(wishlist)">
+  <p><img src={{wishlist?.imageUrl}}/></p>
+  <p><strong>Title: </strong>{{wishlist?.title}}</p>
+  <p><strong>Description: </strong>{{wishlist?.description}}</p>
+  <p><strong>Owner: </strong>{{wishlist?.author}}</p>
+  <p><strong>The wish itself: </strong>{{wishlist.wishes}}</p>
+  <!--<p class="date-pipe"><strong>Date: </strong>{{(carDetails|async).date | dateFormat}}</p>-->
+  <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+</div>

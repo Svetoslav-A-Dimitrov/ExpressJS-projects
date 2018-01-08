@@ -1,0 +1,27 @@
+nav{
+  display: flex;
+  text-align: center;
+  background-color: antiquewhite;
+  position: relative;
+  height: 50px;
+
+}
+nav a {
+  display: inline-block;
+  /*max-width: 30%;*/
+  /*min-width: 10%;*/
+  text-decoration: none;
+  color: darkred;
+  font-size: 1.2em;
+  line-height: 50px;
+  margin-left: 15px;
+}
+nav a.active{
+  color: lightslategray;
+  border-radius: 5px;
+
+}
+ nav a.username{
+    position: absolute;
+    right: 15px;
+}

@@ -1,0 +1,21 @@
+<div *ngIf="!wishesExist"> <h1>No Wishes wet</h1></div>
+<div class="wishlistBlock" *ngIf="wishesExist">
+  <h1>Lists of all wishes</h1>
+  <ul>
+    <li *ngFor="let wishlist of wishlists">
+      <img src={{wishlist.imageUrl}} alt='custum image'>
+      <h3><strong>Wishes creator: </strong>{{wishlist.author}}</h3>
+      <p><strong>The wish is: </strong>{{wishlist.wishes}}</p>
+      <p><a [routerLink]="['/wishlist/details/', wishlist.id]">
+        Details
+        </a></p>
+      <button *ngIf="isAdmin()" class="btn btn-primary" (click)="delete(wishlist.id)">Delete</button>
+    </li>
+  </ul>
+  <div>
+    <button class="btn btn-primary" (click)="goToPrevPage()">Prev</button>
+    <button class="btn btn-primary" (click)="goToNextPage()">Next</button>
+  </div>
+</div>
+
+

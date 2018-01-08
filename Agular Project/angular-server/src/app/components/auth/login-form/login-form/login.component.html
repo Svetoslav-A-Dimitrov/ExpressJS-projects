@@ -1,0 +1,53 @@
+
+
+  <form (ngSubmit)="login()" #loginform="ngForm" class="form" autocomplete="on">
+    <h1>Login</h1>
+    <div class="form-group row">
+      <label for="email" class="col-md-3 col-form-label">Email</label>
+      <div class="col-md-6">
+        <input type="email" id="email" class= 'form-control'
+               required
+               pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+               [(ngModel)]="loginModel.email"
+               name="email"
+               #email="ngModel"
+        >
+      </div>
+      <span (click)="hide($event)" [hidden]="email.valid || email.pristine" class="alert alert-danger">
+        enter valid email adress
+      </span>
+    </div>
+
+    <div class="form-group row">
+      <label for="password" class="col-md-3 col-form-label">Password</label>
+      <div class="col-md-6">
+        <input type="password" id="password" class= 'form-control'
+               required
+               minlength="5"
+               [(ngModel)]="loginModel.password"
+               name="password"
+               #password="ngModel"
+        >
+      </div>
+
+      <span (click)="hide($event)" [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        password must be at least 5 characters long
+      </span>
+    </div>
+    <div class="btn-container col-md-9">
+      <button [disabled]="!loginform.form.valid" type="submit" class="btn btn-success">Login</button>
+    </div>
+  </form>
+
+  <div class="info">
+    <h3>Login Info</h3>
+    <ul>
+      <li>
+        A valid mail must in format mail@mail.com
+      </li>
+      <li>Password must be al least 5 characters long</li>
+      <li>Click on any error message to hide it</li>
+    </ul>
+  </div>
+
+

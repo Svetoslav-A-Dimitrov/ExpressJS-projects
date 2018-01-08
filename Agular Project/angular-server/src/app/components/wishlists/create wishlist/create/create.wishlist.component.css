@@ -1,0 +1,32 @@
+.alert{
+  position: absolute;
+  right: -210px;
+  top: -8px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.form-group{
+  position: relative;
+}
+
+.form{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.img-rounded.img-responsive{
+  margin: 0 auto;
+  width: 200px;
+  margin-bottom: 30px
+}
+
+h1{
+  margin-bottom: 20px
+}
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
