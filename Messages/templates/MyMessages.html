@@ -1,0 +1,18 @@
+<table>
+    <thead>
+    <tr>
+        <th>From</th>
+        <th>Message</th>
+        <th>Date Sent</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each msgs}}
+    <tr data-id="{{id}}">
+        <td>{{name}}</td>
+        <td>{{msgText}}</td>
+        <td>{{date}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
